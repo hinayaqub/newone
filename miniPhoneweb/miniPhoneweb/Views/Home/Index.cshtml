@@ -1,0 +1,111 @@
+﻿@model IEnumerable<miniPhoneweb.Models.PersonViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+<label>Total Number Of People</label>@ViewBag.TotalPeople
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create" , "Person")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaceBookAccountId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LinkedInId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TwitterId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiddleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaceBookAccountId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LinkedInId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImagePath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TwitterId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
